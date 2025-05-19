@@ -1,4 +1,4 @@
-'''
+"""
 Zakupy online - rabaty
 
 Wczytaj od użytkownika:
@@ -11,7 +11,7 @@ Rabat:
 - dodatkowe 5% jeśli produkt promocyjny.
 
 Wyświetl "Twój rabat wynosi X%" bez użycia ifów.
-'''
+"""
 
 zamowienie = float(input("Podaj cenę swojego zamówienia: "))
 

@@ -75,7 +75,7 @@ cwiczenia_powyzej_15_minut = 0
 najdluzsze_cwiczenie = 0
 while True:
     czas_cwiczenia = input("Podaj czas ćwiczenia (w minutach): ")
-    if czas_cwiczenia: # if czas_cwiczenia != "":
+    if czas_cwiczenia:  # if czas_cwiczenia != "":
         czas_cwiczenia = int(czas_cwiczenia)
         if czas_cwiczenia > 45 or czas_cwiczenia < 5:
             break
@@ -90,6 +90,6 @@ while True:
     prawdziwy_czas_treningu += czas_cwiczenia
 
 print(f"Czas trwania treningu: {prawdziwy_czas_treningu} minut")
-print(f"Wykorzystaliśmy {(prawdziwy_czas_treningu/czas_treningu) * 100} % planu")
+print(f"Wykorzystaliśmy {(prawdziwy_czas_treningu / czas_treningu) * 100} % planu")
 print(f"Liczba ćwiczeń powyżej 15 minut: {cwiczenia_powyzej_15_minut}")
 print(f"Najdłuższe ćwiczenie: {najdluzsze_cwiczenie} minut")

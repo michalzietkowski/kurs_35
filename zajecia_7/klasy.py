@@ -10,8 +10,9 @@ ksiazki = [
         "autor": "J.R.R. Tolkien",
         "rok_wydania": 1954,
         "gatunek": "fantasy",
-    }
+    },
 ]
+
 
 def dodaj_ksiazke(tytul, autor, rok_wydania, gatunek):
     ksiazka = {
@@ -23,21 +24,25 @@ def dodaj_ksiazke(tytul, autor, rok_wydania, gatunek):
     ksiazki.append(ksiazka)
     print(f"Dodano książkę: {tytul} autorstwa {autor}.")
 
-ksiazki.append({
-    "tytuł": "Wiedźmin",
-    "autor": "Andrzej Sapkowski",
-    "rok_wydania": 1990,
-    "gatunek": "fantasy",
-})
+
+ksiazki.append(
+    {
+        "tytuł": "Wiedźmin",
+        "autor": "Andrzej Sapkowski",
+        "rok_wydania": 1990,
+        "gatunek": "fantasy",
+    }
+)
+
 
 def wyszukaj_ksiazke(tytul):
     for ksiazka in ksiazki:
         if ksiazka["tytul"] == tytul:
             return ksiazka
 
+
 dodaj_ksiazke("Złodziejka książek", "Markus Zusak", 2005, "powieść")
 print(ksiazki)
-
 
 
 class Ksiazka:
@@ -62,10 +67,12 @@ print(ksiazka)
 ksiazka_2 = Ksiazka("Harry Potter i Więzień Askabanu", "J.K. Rowling", 1997, "fantasy")
 
 
-lista_kisazek = [ksiazka, ksiazka_2,
-                 Ksiazka("Władca Pierścieni", "J.R.R. Tolkien", 1954, "fantasy"),
-                 Ksiazka("Złodziejka książek", "Markus Zusak", 2005, "powieść")]
-
+lista_kisazek = [
+    ksiazka,
+    ksiazka_2,
+    Ksiazka("Władca Pierścieni", "J.R.R. Tolkien", 1954, "fantasy"),
+    Ksiazka("Złodziejka książek", "Markus Zusak", 2005, "powieść"),
+]
 
 
 auto = {
@@ -77,8 +84,9 @@ auto = {
     "aktualny_bieg": "neutralny",
     "silnik_wlaczony": False,
     "predkosc": 0,
-    "rodzaj_opon": "letnie"
+    "rodzaj_opon": "letnie",
 }
+
 
 def wlacz_silnik(auto):
     if auto["silnik_wlaczony"]:
@@ -88,9 +96,19 @@ def wlacz_silnik(auto):
         print("Silnik został włączony.")
 
 
-
 class Auto:
-    def __init__(self, marka, model, rok_produkcji, kolor, przebieg, aktualny_bieg, silnik_wlaczony, predkosc, rodzaj_opon):
+    def __init__(
+        self,
+        marka,
+        model,
+        rok_produkcji,
+        kolor,
+        przebieg,
+        aktualny_bieg,
+        silnik_wlaczony,
+        predkosc,
+        rodzaj_opon,
+    ):
         self.marka = marka
         self.model = model
         self.rok_produkcji = rok_produkcji
@@ -112,6 +130,7 @@ class Auto:
             self.silnik_wlaczony = True
             print("Silnik został włączony.")
 
+
 auto = Auto("Audi", "A4", 2020, "czarny", 15000, "neutralny", False, 0, "letnie")
 
 auto.wlacz_silnik()
@@ -125,4 +144,3 @@ else:
 class Ksiazki:
     def __init__(self, ksiazki):
         self.ksiazki = ksiazki
-

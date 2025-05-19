@@ -1,6 +1,6 @@
 # To jest nasz komentarz
 
-#print("Hello World")
+# print("Hello World")
 
 ################## INTEGERS AND FLOATS ##################
 # wiek = 20
@@ -116,4 +116,4 @@ print(bool(""))
 print(bool(" "))
 print(bool("0"))
 
-print('Witam w moim swiecie')
+print("Witam w moim swiecie")

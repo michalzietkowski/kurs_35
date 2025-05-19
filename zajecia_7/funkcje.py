@@ -88,7 +88,6 @@ def sprawdzenie_emerytury(wiek, pensja, pozycja):
     print("Obliczylismy emeryturę dla osoby pracującej")
     return emerytura
 
+
 emerytura = sprawdzenie_emerytury(wiek=67, pensja=5000, pozycja="programista")
 print(emerytura)
-
-

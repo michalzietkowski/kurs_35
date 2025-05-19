@@ -25,6 +25,10 @@ ma_dostep_13plus = wiek >= 13 or zgoda_potwierdzona
 # print(f"Uzytkownik ma zgode rodzica: {zgoda_potwierdzona}")
 # print(f"Uzytkownik ma dostep do filmow 18+: {ma_dostep_18plus}")
 # print(f"Uzytkownik ma dostep do filmow 13+: {ma_dostep_13plus}")
-print("Filmy 18+" * ma_dostep_18plus + "Filmy 13+" * ma_dostep_13plus + "Tylko bajki" * (not ma_dostep_18plus and not ma_dostep_13plus))
+print(
+    "Filmy 18+" * ma_dostep_18plus
+    + "Filmy 13+" * ma_dostep_13plus
+    + "Tylko bajki" * (not ma_dostep_18plus and not ma_dostep_13plus)
+)
 
 print(0 == False)

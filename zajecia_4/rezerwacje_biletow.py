@@ -65,7 +65,9 @@ laczna_liczba_biletow = 0
 najwieksza_ilosc_biletow_w_transakcji = 0
 transakcja_z_najwieksza_iloscia_biletow = None
 for transakcja in range(liczba_osob):
-    liczba_biletow_w_transakcji = int(input(f"Podaj liczbę biletów dla osoby {transakcja + 1}: "))
+    liczba_biletow_w_transakcji = int(
+        input(f"Podaj liczbę biletów dla osoby {transakcja + 1}: ")
+    )
     if liczba_biletow_w_transakcji < 1 or liczba_biletow_w_transakcji > 5:
         print("Nieprawidłowa wartość. Wprowadzanie danych zakończone.")
         break
@@ -82,4 +84,6 @@ else:
 print(f"Liczba biletów: {laczna_liczba_biletow}")
 print(f"Łączna cena biletów to: {laczna_liczba_biletow * cena_biletu} zł")
 print(f"Największa transakcja: {najwieksza_ilosc_biletow_w_transakcji}")
-print(f"Transakcja z największą ilością biletów: {transakcja_z_najwieksza_iloscia_biletow}")
+print(
+    f"Transakcja z największą ilością biletów: {transakcja_z_najwieksza_iloscia_biletow}"
+)

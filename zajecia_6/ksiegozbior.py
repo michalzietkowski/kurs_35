@@ -24,9 +24,11 @@ Funkcje po wywołaniu danych komend są następujące:
 - Po każdej komendzie system wyświetla ponownie listę dostępnych opcji i prosi o wybór kolejnej.
 - Ochrona przed błędami użytkownika, takimi jak wpisywanie błędnych danych czy żądanie zakupu na wartości ujemne.
 """
+
 # bedziemy dzialali w jednej petli while True:
 # lista ksiazek
-lista_ksiazek = [{
+lista_ksiazek = [
+    {
         "tytul": "Harry Potter i Kamień Filozoficzny",
         "autor": "J.K. Rowling",
         "rok_wydania": 1997,
@@ -55,10 +57,13 @@ lista_ksiazek = [{
         "kategoria": "klasyka",
         "ilosc": 2,
         "ISBN": "978-0-14-044913-6",
-    }
+    },
 ]
 saldo = 10000
-historia = ["Sprzedaż książki: Harry Potter i Kamień Filozoficzny, 39.99, 5 sztuk", "Zakup książki: Władca Pierścieni: Drużyna Pierścienia, 49.99, 3 sztuki"]
+historia = [
+    "Sprzedaż książki: Harry Potter i Kamień Filozoficzny, 39.99, 5 sztuk",
+    "Zakup książki: Władca Pierścieni: Drużyna Pierścienia, 49.99, 3 sztuki",
+]
 print("Witaj w systemie zarządzania księgozbiorem bibliotecznym!")
 while True:
     print("Wybierz jedną z poniższych opcji(Podaj numer):")
@@ -90,8 +95,10 @@ while True:
                         print("Nie ma tej książki na stanie.")
                         break
                     ksiazka["ilosc_na_stanie"] -= 1
-                    saldo += 10 # koszt wypożyczenia książki
-                    historia.append(f"Wypożyczenie książki: {ksiazka['tytul']}, {ksiazka['autor']}, 1 sztuka")
+                    saldo += 10  # koszt wypożyczenia książki
+                    historia.append(
+                        f"Wypożyczenie książki: {ksiazka['tytul']}, {ksiazka['autor']}, 1 sztuka"
+                    )
                     break
             if not ksiazka_znaleziona:
                 print("Taka książka nie istnieje.")
@@ -105,10 +112,12 @@ while True:
             rok_wydania = int(input("Podaj rok wydania książki: "))
             if saldo - (koszt * ilosc) < 0:
                 print("Nie możesz ustawić salda na wartość ujemną.")
-                historia.append(f"Próba zakupu książki: {tytul}, {koszt}, {ilosc} sztuk - nieudana")
+                historia.append(
+                    f"Próba zakupu książki: {tytul}, {koszt}, {ilosc} sztuk - nieudana"
+                )
                 continue
             else:
-                saldo -= (koszt * ilosc)
+                saldo -= koszt * ilosc
             znaleziono_ksiazke = False
             for ksiazka in lista_ksiazek:
                 if ksiazka.get("ISBN") == numer_isbn:
@@ -116,16 +125,18 @@ while True:
                     ksiazka["ilosc_na_stanie"] += ilosc
                     break
             if not znaleziono_ksiazke:
-                lista_ksiazek.append({
-                    "tytul": tytul,
-                    "autor": autor,
-                    "cena": koszt,
-                    "ilosc_na_stanie": ilosc,
-                    "ilosc": ilosc,
-                    "kategoria": kategoria,
-                    "ISBN": numer_isbn,
-                    "rok_wydania": rok_wydania,
-                })
+                lista_ksiazek.append(
+                    {
+                        "tytul": tytul,
+                        "autor": autor,
+                        "cena": koszt,
+                        "ilosc_na_stanie": ilosc,
+                        "ilosc": ilosc,
+                        "kategoria": kategoria,
+                        "ISBN": numer_isbn,
+                        "rok_wydania": rok_wydania,
+                    }
+                )
                 historia.append(f"Zakup książki: {tytul}, {koszt}, {ilosc} sztuk")
         case "5":
             print(f"Zestawienie księgozbioru:{lista_ksiazek}")

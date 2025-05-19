@@ -54,6 +54,5 @@ print("Moje kolejne instrukcje")
 ###################### petla while:
 
 
-
 # while {warunek logiczny}:
 #     {blok kodu} # wykonuje się dopóki warunek logiczny jest spełniony

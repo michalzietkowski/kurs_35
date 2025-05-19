@@ -15,6 +15,7 @@ Wyświetl:
 - "Awaria częściowa - sprawdź system",
 - "System działa poprawnie".
 """
+
 serwer_awaria = input("Serwer nie odpowiada? (tak/nie): ")
 serwer_awaria = serwer_awaria.lower()
 
@@ -24,6 +25,10 @@ baza_awaria = baza_awaria.lower()
 aplikacja_awaria = input("Aplikacja webowa jest dostępna? (tak/nie): ")
 aplikacja_awaria = aplikacja_awaria.lower()
 
-print("Natychmiastowa interwencja" * (serwer_awaria == "tak" and baza_awaria == "tak") + " Awaria częściowa - sprawdź system"
-      * (serwer_awaria == "tak" or baza_awaria == "tak" or aplikacja_awaria == "tak")
-      + "System działa poprawnie" * (serwer_awaria == "nie" and baza_awaria == "nie" and aplikacja_awaria == "nie"))
+print(
+    "Natychmiastowa interwencja" * (serwer_awaria == "tak" and baza_awaria == "tak")
+    + " Awaria częściowa - sprawdź system"
+    * (serwer_awaria == "tak" or baza_awaria == "tak" or aplikacja_awaria == "tak")
+    + "System działa poprawnie"
+    * (serwer_awaria == "nie" and baza_awaria == "nie" and aplikacja_awaria == "nie")
+)

@@ -1,4 +1,5 @@
 from collections.abc import Iterable
+
 #
 # lista_uczniow = ["Jan", "Anna", "Piotr", "Kasia", "Tomek"]
 # print(isinstance(lista_uczniow, Iterable))

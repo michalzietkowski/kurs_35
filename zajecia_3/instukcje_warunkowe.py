@@ -34,7 +34,6 @@
 #     print(f"Kupiłeś produkt {nazwa_produktu} w cenie {cena_produktu} zł.")
 
 
-
 zawod = input("Podaj swój zawód: ")
 wiek = int(input("Podaj swój wiek: "))
 

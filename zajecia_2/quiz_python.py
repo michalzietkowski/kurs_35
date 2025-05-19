@@ -1,4 +1,4 @@
-'''
+"""
 Quiz wiedzy o podstawach Pythona
 
 Wczytaj odpowiedzi użytkownika na 10 pytań:
@@ -15,7 +15,7 @@ Wczytaj odpowiedzi użytkownika na 10 pytań:
 
 Policz punkty za poprawne odpowiedzi.
 Jeśli >=7 punktów - "Quiz zaliczony", w przeciwnym razie "Quiz niezaliczony".
-'''
+"""
 
 punktacja_uzytkownika = 0
 
@@ -40,7 +40,9 @@ odpowiedz = input("5. Typ wyniku 2+3? (int/float): ")
 punktacja_uzytkownika += 1 * (odpowiedz.lower() == "int")
 
 # Pytanie 6
-odpowiedz = input("6. Jak zapisać tekst z apostrofem ('I'm')? podwojne apostrofy czy pojedyncze?: ")
+odpowiedz = input(
+    "6. Jak zapisać tekst z apostrofem ('I'm')? podwojne apostrofy czy pojedyncze?: "
+)
 punktacja_uzytkownika += 1 * (odpowiedz.lower() == "podwojne")
 
 # Pytanie 7
@@ -61,4 +63,7 @@ punktacja_uzytkownika += 1 * (odpowiedz == "nie")
 
 print(f"Twoja punktacja to: {punktacja_uzytkownika}/10")
 
-print("Quiz zaliczony!" * (punktacja_uzytkownika >= 7) + "Quiz niezaliczony!" * (punktacja_uzytkownika < 7))
+print(
+    "Quiz zaliczony!" * (punktacja_uzytkownika >= 7)
+    + "Quiz niezaliczony!" * (punktacja_uzytkownika < 7)
+)

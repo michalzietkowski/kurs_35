@@ -33,6 +33,5 @@
 # print(moje_imie)
 
 
-
-print ("a"== "A")
+print("a" == "A")
 print("adam" == "Adam")
