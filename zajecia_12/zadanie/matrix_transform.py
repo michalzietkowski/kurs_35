@@ -51,3 +51,4 @@ file_handler = FileHandler(input_file_path=arguments[0], output_file_path=argume
 print(file_handler.data)
 file_handler.do_transformations()
 file_handler.save_data()
+print(file_handler.data)
