@@ -1,0 +1,32 @@
+[
+    {
+        "full_name": "Poland",
+        "capital": "Warsaw",
+        "region": "Europe",
+        "subregion": "Central Europe",
+        "population": 37950802,
+        "languages": "Polish",
+        "currency": "Polish z\u0142oty (PLN)",
+        "flag": "https://flagcdn.com/pl.svg"
+    },
+    {
+        "full_name": "Sweden",
+        "capital": "Stockholm",
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 10353442,
+        "languages": "Swedish",
+        "currency": "Swedish krona (SEK)",
+        "flag": "https://flagcdn.com/se.svg"
+    },
+    {
+        "full_name": "Portugal",
+        "capital": "Lisbon",
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 10305564,
+        "languages": "Portuguese",
+        "currency": "Euro (EUR)",
+        "flag": "https://flagcdn.com/pt.svg"
+    }
+]
