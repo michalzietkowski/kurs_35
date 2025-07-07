@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nasze zadanie z HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+<div>
+    <h1 id="title_h1" class="title">Najwiekszy naglowek</h1>
+    <h2 id="title_h2" class="title">Drugi naglowek</h2>
+    <h3>Trzeci nagłówek</h3>
+    <h4>Czwarty nagłówek</h4>
+    <h5>Piąty nagłówek</h5>
+    <h6>Szósty nagłówek</h6>
+    <p>To jest treść naszej strony.</p>
+</div>
+<div>
+    <img src="https://cdn.plejada.pl/1/Y5lk9lBaHR0cHM6Ly9vY2RuLmV1L3B1bHNjbXMvTURBXy9kNjBjMWNiZmMyMTUxMGNiMDY5ZmI4ZWQzZDE1OTJlMS5qcGeRlQLNAaQAwsPeAAKhMAehMQQ">
+    <a href="http://www.onet.pl">tutaj wejdziesz sobie na onet.pl</a>
+</div>
+<div>
+    <ul>
+        <li>To jest pierwszy element listy</li>
+        <li>To jest drugi element listy</li>
+        <li>To jest trzeci element listy</li>
+        <li>To jest czwarty element listy</li>
+        <li>To jest piąty element listy</li>
+    </ul>
+</div>
+<div>
+    <ol>
+        <li>To jest pierwszy element listy numerowanej</li>
+        <li>To jest drugi element listy numerowanej</li>
+        <li>To jest trzeci element listy numerowanej</li>
+        <li>To jest czwarty element listy numerowanej</li>
+        <!-- To jest nasz jakis dziwny element -->
+        <li>To jest piąty element listy numerowanej</li>
+    </ol>
+</div>
+<div>
+    <table>
+        <tr>
+            <th>Nagłówek 1</th>
+            <th>Nagłówek 2</th>
+            <th>Nagłówek 3</th>
+        </tr>
+        <tr>
+            <td>Wiersz 1, Komórka 1</td>
+            <td>Wiersz 1, Komórka 2</td>
+            <td>Wiersz 1, Komórka 3</td>
+        </tr>
+        <tr>
+            <td>Wiersz 2, Komórka 1</td>
+            <td>Wiersz 2, Komórka 2</td>
+            <td>Wiersz 2, Komórka 3</td>
+        </tr>
+    </table>
+</div>
+<div>
+    <form>
+        <h1>Formularz dodania użytkownika</h1>
+        <div>
+            <label>Imię:</label>
+            <input type="text" name="imie" placeholder="Wpisz swoje imię" required>
+        </div>
+        <div>
+            <label>Hasło</label>
+            <input type="password" name="haslo" placeholder="Wpisz swoje hasło" required>
+        </div>
+        <div>
+            <label>Adres e-mail:</label>
+            <input type="email" name="email" placeholder="Wpisz swój adres e-mail" required>
+        </div>
+        <div>
+            <label>Płeć:</label>
+            <select name="plec">
+                <option value="mezczyzna">Mężczyzna</option>
+                <option value="kobieta">Kobieta</option>
+                <option value="inne">Inne</option>
+            </select>
+            <input type="radio" value="mężczyzna" name="plec">
+            <label>Mężczyzna</label>
+            <input type="radio" value="kobieta" name="plec">
+            <label>Kobieta</label>
+            <input type="radio" value="inne" name="plec">
+            <label>Inne</label>
+        </div>
+        <button type="submit">Wyślij formularz</button>
+    </form>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>John</td>
+      <td>Doe</td>
+      <td>@social</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
