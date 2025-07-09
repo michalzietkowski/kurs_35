@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <button>
+        <a href="/">Home</a>
+    </button>
+    <button>
+        <a href="/users">Users</a>
+    </button>
+    <button>
+        <a href="/hello_user">Hello User</a>
+    </button>
+    {% if user_name %}
+    <h1>Hello, {{ user_name }}!</h1>
+    <p>Welcome to our website.</p>
+      {% if user_name.endswith("a") %}
+      <p>It's great to see you, Ms. {{ user_name }}!</p>
+      {% else %}
+      <p>It's great to see you, Mr. {{ user_name }}!</p>
+      {% endif %}
+    {% else %}
+    <h1>Hello, Guest!</h1>
+    <p>Please log in to enjoy personalized content.</p>
+    {% endif %}
+    {% if user_age < 18 %}
+    <p>Since you are under 18, please be aware of the content you access.</p>
+    {% elif user_age > 18 and user_age <65 %}
+    <p>Enjoy our content tailored for adults!</p>
+    {% else %}
+    <p>We have special content for seniors as well!</p>
+    {% endif %}
+{% endblock %}
