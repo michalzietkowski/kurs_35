@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    font-family: "DejaVu Math TeX Gyre";
+    background-color: #86989B;
+}
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+}
+
+.box {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .box {
+        font-size: 1.2em;
+        background-color: #9C1A1C;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box {
+        font-size: 1.5em;
+        background-color: #F0A500;
+    }
+}
+
+@media (max-width: 767px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .box {
+        font-size: 2em;
+        background-color: #4CBB17;
+    }
+}
