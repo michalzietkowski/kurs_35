@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia - Księgarnia u Michała</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body class="bg-light text-dark m-2 p-0">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ url_for('ksiegarnia.index') }}">Księgarnia u Michała</a>
+      <div id="navbarSupportedContent">
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('ksiegarnia.index') }}">Strona główna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('ksiegarnia.historia') }}">Historia</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h1 class="text-center mb-4">Historia Transakcji</h1>
+        
+        {% if historia %}
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">Wszystkie transakcje ({{ historia|length }})</h5>
+            </div>
+            <div class="card-body">
+              <div class="list-group list-group-flush">
+                {% for index, wpis in historia|reverse|list|enumerate %}
+                  <div class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Transakcja #{{ historia|length - index }}</div>
+                      {{ wpis }}
+                    </div>
+                    <small class="text-muted">
+                      {% if 'Zakup' in wpis %}
+                        <span class="badge bg-primary rounded-pill">Zakup</span>
+                      {% elif 'Wypożyczenie' in wpis %}
+                        <span class="badge bg-success rounded-pill">Wypożyczenie</span>
+                      {% elif 'Sprzedaż' in wpis %}
+                        <span class="badge bg-warning rounded-pill">Sprzedaż</span>
+                      {% else %}
+                        <span class="badge bg-secondary rounded-pill">Inne</span>
+                      {% endif %}
+                    </small>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% else %}
+          <div class="text-center">
+            <div class="alert alert-info" role="alert">
+              <h4 class="alert-heading">Brak historii</h4>
+              <p>Nie ma jeszcze żadnych transakcji w historii.</p>
+              <hr>
+              <p class="mb-0">Zacznij od dodania nowej książki lub wypożyczenia istniejącej!</p>
+            </div>
+            <a href="{{ url_for('ksiegarnia.index') }}" class="btn btn-primary">Wróć do księgarni</a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html> 

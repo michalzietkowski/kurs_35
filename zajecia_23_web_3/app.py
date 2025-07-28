@@ -40,16 +40,31 @@ def hello_user(name=None):
 
 @app.route("/users", methods=["GET", "POST"])
 def show_users():
+    saldo = 10
     if request.method == "POST":
-        new_user = {
-            "name": request.form.get("name"),
-            "age": request.form.get("age"),
-            "email": request.form.get("email"),
-            "city": request.form.get("city_name")
-        }
-        users.append(new_user)
-        return redirect("/")
-    return render_template("users.html", users=users)
+        form_type = request.form.get("form_type")
+        match form_type:
+            case "change_price":
+                print("Changing price")
+                saldo = request.form.get("new_saldo")
+            case "add_user":
+                print(form_type)
+                new_user = {
+                    "name": request.form.get("name"),
+                    "age": request.form.get("age"),
+                    "email": request.form.get("email"),
+                    "city": request.form.get("city_name")
+                }
+                users.append(new_user)
+
+            case "delete_user":
+                print(form_type)
+                user_name = request.form.get("delete_name")
+                for user in users:
+                    if user["name"] == user_name:
+                        users.remove(user)
+                        break
+    return render_template("users.html", users=users, saldo=saldo)
 
 
 if __name__ == "__main__":
